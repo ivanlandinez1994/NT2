@@ -13,22 +13,6 @@ $(document).ready(function () {
 
 });
 
-<<<<<<< HEAD
-function checkPronvincia() {
-	var laboral = document.getElementById('cmbLocalidadL');
-	var domicilio = document.getElementById('cmbLocalidad');
-	console.log(event.target.value);
-	$.get("json/buenos-aires.json", function (data) {
-		console.log("Martin");
-	});
-	//console.log($(event.target).children(":first").data('ort'));
-	
-	if (laboral.value == "ciudad") {
-		$("#cmbLocalidad").parents().show('slow');
-	}else {
-		$("#cmbLocalidad").parents().hide('slow');
-	}
-=======
 function checkPronvincia(id) {
 	var domicilioPersonal = document.getElementById("cmbProvincia");
 	var domicilioLaboral = document.getElementById("cmbProvinciaL");
@@ -52,7 +36,6 @@ function checkPronvincia(id) {
 			divContenedorProvinciaL.className = divContenedorProvinciaL.className.replace(" col-sm-12 col-lg-12", " col-sm-6 col-lg-6") ;
 		}
 	}	
->>>>>>> master
 }
 
 function validInput(e) {
