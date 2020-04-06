@@ -13,22 +13,6 @@ $(document).ready(function () {
 
 });
 
-<<<<<<< HEAD
-function checkPronvincia() {
-	var laboral = document.getElementById('cmbLocalidadL');
-	var domicilio = document.getElementById('cmbLocalidad');
-	console.log(event.target.value);
-	$.get("json/buenos-aires.json", function (data) {
-		console.log("Martin");
-	});
-	//console.log($(event.target).children(":first").data('ort'));
-	
-	if (laboral.value == "ciudad") {
-		$("#cmbLocalidad").parents().show('slow');
-	}else {
-		$("#cmbLocalidad").parents().hide('slow');
-	}
-=======
 function checkPronvincia(id) {
 	var domicilioPersonal = document.getElementById("cmbProvincia");
 	var domicilioLaboral = document.getElementById("cmbProvinciaL");
@@ -52,7 +36,6 @@ function checkPronvincia(id) {
 			divContenedorProvinciaL.className = divContenedorProvinciaL.className.replace(" col-sm-12 col-lg-12", " col-sm-6 col-lg-6") ;
 		}
 	}	
->>>>>>> master
 }
 
 function validInput(e) {
@@ -202,7 +185,7 @@ function validateForm() {
 	// A loop that checks every input field in the current tab:
 	for (i = 0; i < y.length; i++) {
 		// If a field is empty...
-		if (y[i].value == "") {
+		if (y[i].value == "" && !y[i].className.includes("exceptuado")) {
 			// add an "invalid" class to the field:
 			y[i].className += " invalid";
 			// and set the current valid status to false:
